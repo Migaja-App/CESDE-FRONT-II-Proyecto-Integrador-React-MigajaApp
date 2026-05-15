@@ -1,0 +1,358 @@
+.panel {
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.title {
+    font-family: var(--font-headings);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 0 0 0.5rem 0;
+}
+
+.subtitle {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.btnNuevo {
+    background: var(--primary-coral);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: var(--transition-organic);
+    box-shadow: 0 4px 12px rgba(238, 96, 85, 0.2);
+    white-space: nowrap;
+    font-family: inherit;
+}
+
+.btnNuevo:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(238, 96, 85, 0.3);
+}
+
+.tableWrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1700px;
+}
+
+.table th {
+    text-align: left;
+    padding: 0.85rem 1rem;
+    border-bottom: 2px solid var(--border-color);
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: var(--bg-main);
+}
+
+.table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    vertical-align: middle;
+}
+
+.table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.table tbody tr:hover {
+    background-color: var(--bg-main);
+}
+
+.descCell {
+    font-weight: 600;
+    max-width: 220px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.amountCol {
+    text-align: right;
+    width: 140px;
+}
+
+.amountCell {
+    font-weight: 700;
+    color: var(--primary-coral);
+    font-family: var(--font-headings);
+}
+
+.truncate {
+    max-width: 160px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.actionsCol {
+    text-align: right;
+    width: 120px;
+}
+
+.actionsCell {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.actionBtn {
+    width: 36px;
+    height: 36px;
+    background: #FFFFFF;
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: var(--transition-organic);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    font-size: 1rem;
+    margin-left: 0.5rem;
+    padding: 0;
+}
+
+.actionBtn:first-of-type {
+    margin-left: 0;
+}
+
+.editBtn:hover {
+    border-color: var(--primary-coral);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(238, 96, 85, 0.1);
+}
+
+.deleteBtn:hover {
+    background: #FFF5F5;
+    border-color: var(--danger);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(238, 96, 85, 0.15);
+}
+
+.message,
+.empty {
+    padding: 2rem;
+    text-align: center;
+    color: var(--text-muted);
+}
+
+.error {
+    color: var(--danger);
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.centerCol {
+    text-align: center;
+}
+
+.codeBadge {
+    display: inline-block;
+    padding: 0.2rem 0.55rem;
+    border-radius: 6px;
+    background: var(--bg-main);
+    color: var(--text-muted);
+    font-family: 'Courier New', monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
+.boolBadge {
+    display: inline-block;
+    padding: 0.2rem 0.7rem;
+    border-radius: 10px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    min-width: 36px;
+}
+
+.boolYes {
+    background: rgba(96, 211, 148, 0.15);
+    color: var(--success-green);
+}
+
+.boolNo {
+    background: var(--border-color);
+    color: var(--text-muted);
+}
+
+.impactoBadge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-coral) 0%, var(--accent-peach) 100%);
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 0.8rem;
+    font-family: var(--font-headings);
+}
+
+.imagenLink {
+    color: var(--primary-coral);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 0.25rem 0.6rem;
+    border-radius: 8px;
+    transition: var(--transition-organic);
+}
+
+.imagenLink:hover {
+    background: rgba(238, 96, 85, 0.08);
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    .panel {
+        padding: 1rem;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btnNuevo {
+        width: 100%;
+        padding: 0.875rem;
+    }
+
+    .table th,
+    .table td {
+        padding: 0.65rem 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .table th {
+        font-size: 0.7rem;
+    }
+
+    .descCell,
+    .truncate {
+        max-width: 130px;
+    }
+
+    .amountCol {
+        width: 100px;
+    }
+
+    .actionBtn {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+    }
+
+    .codeBadge,
+    .boolBadge {
+        font-size: 0.65rem;
+        padding: 0.15rem 0.5rem;
+    }
+
+    .impactoBadge {
+        width: 24px;
+        height: 24px;
+        font-size: 0.7rem;
+    }
+
+}
+
+.paginacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.paginaBtnFlecha {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1.5px solid var(--border-color);
+    background: var(--bg-card);
+    color: var(--text-muted);
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: var(--transition-organic);
+    line-height: 1;
+}
+
+.paginaBtnFlecha:hover:not(:disabled) {
+    border-color: var(--primary-coral);
+    color: var(--primary-coral);
+    background: var(--accent-peach-light);
+}
+
+.paginaBtnFlecha:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.paginaDots {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--border-color);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: var(--transition-organic);
+}
+
+.dot:hover {
+    background: var(--accent-peach);
+}
+
+.dotActivo {
+    width: 22px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, var(--primary-coral), var(--accent-peach));
+    cursor: default;
+}

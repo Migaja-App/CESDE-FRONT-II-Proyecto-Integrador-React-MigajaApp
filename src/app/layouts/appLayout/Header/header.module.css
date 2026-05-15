@@ -1,0 +1,82 @@
+.header {
+    height: 72px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    background-color: #FFFFFF;
+    position: sticky;
+    top: 0;
+    z-index: 90;
+}
+
+.burger {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--primary-coral);
+}
+
+.searchBar {
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-main);
+    border-radius: var(--radius-sm);
+    padding: 0.5rem 1rem;
+    width: 280px;
+}
+
+.searchBar input {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    width: 100%;
+}
+
+.userProfile {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--primary-coral);
+    color: #FFFFFF;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.userName {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+}
+
+@media (max-width: 768px) {
+    .burger {
+        display: block;
+    }
+
+    .searchBar {
+        width: 160px;
+    }
+
+    .header {
+        padding: 0 1rem;
+        height: 60px;
+    }
+
+    .userName {
+        display: none;
+    }
+}

@@ -1,0 +1,88 @@
+.card {
+    background: var(--bg-card);
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    transition: var(--transition-organic);
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.cardHero {
+    background: linear-gradient(135deg, var(--primary-coral) 0%, var(--accent-peach) 100%);
+    border-color: transparent;
+    color: #FFFFFF;
+}
+
+.icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: rgba(238, 96, 85, 0.1);
+    color: var(--primary-coral);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+}
+
+.icon_hero {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.icon_green {
+    background: rgba(96, 211, 148, 0.12);
+    color: var(--success-green);
+}
+
+.icon_gold {
+    background: rgba(255, 217, 125, 0.25);
+    color: #B38600;
+}
+
+.info {
+    flex: 1;
+    min-width: 0;
+}
+
+.label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    color: var(--text-muted);
+    margin: 0 0 0.3rem 0;
+}
+
+.cardHero .label {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.value {
+    font-family: var(--font-headings);
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--text-dark);
+}
+
+.cardHero .value {
+    color: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+    .card {
+        padding: 1.15rem;
+    }
+
+    .value {
+        font-size: 1.3rem;
+    }
+}

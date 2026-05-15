@@ -1,0 +1,145 @@
+.panel {
+    background: var(--bg-card);
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+}
+
+.title {
+    font-family: var(--font-headings);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 0 0 1.25rem 0;
+}
+
+.lista {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.itemHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.5rem;
+}
+
+.nombre {
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.monto {
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--text-dark);
+    font-family: var(--font-headings);
+    white-space: nowrap;
+}
+
+.barTrack {
+    width: 100%;
+    height: 8px;
+    background: var(--bg-main);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.barFill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.meta {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.empty {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+
+.paginacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.paginaBtnFlecha {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1.5px solid var(--border-color);
+    background: var(--bg-card);
+    color: var(--text-muted);
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: var(--transition-organic);
+    line-height: 1;
+}
+
+.paginaBtnFlecha:hover:not(:disabled) {
+    border-color: var(--primary-coral);
+    color: var(--primary-coral);
+    background: var(--accent-peach-light);
+}
+
+.paginaBtnFlecha:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.paginaDots {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--border-color);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: var(--transition-organic);
+}
+
+.dotActivo {
+    width: 20px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, var(--primary-coral), var(--accent-peach));
+    cursor: default;
+}
+
+@media (max-width: 768px) {
+    .panel {
+        padding: 1.15rem;
+    }
+}

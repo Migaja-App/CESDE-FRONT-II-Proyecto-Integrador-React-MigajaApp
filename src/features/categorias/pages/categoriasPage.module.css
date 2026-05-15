@@ -1,0 +1,279 @@
+.panel {
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+}
+
+.header {
+    margin-bottom: 2rem;
+}
+
+.title {
+    font-family: var(--font-headings);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 0 0 0.5rem 0;
+}
+
+.subtitle {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1.25rem;
+}
+
+.addCard {
+    background: transparent;
+    border: 2px dashed var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.5rem 1rem 1.15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    transition: var(--transition-organic);
+    min-height: 140px;
+    color: var(--text-muted);
+    font-family: inherit;
+}
+
+.addCard:hover {
+    border-color: var(--primary-coral);
+    color: var(--primary-coral);
+    background: rgba(238, 96, 85, 0.03);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.addIcon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 300;
+    transition: var(--transition-organic);
+}
+
+.addCard:hover .addIcon {
+    background: rgba(238, 96, 85, 0.1);
+}
+
+.addLabel {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.message {
+    padding: 2rem;
+    text-align: center;
+    color: var(--text-muted);
+}
+
+.error {
+    color: var(--danger);
+}
+
+/* Modal de opciones */
+.optionsContent {
+    padding: 3.5rem;
+    text-align: left;
+}
+
+.optionsIcon {
+    width: 64px;
+    height: 64px;
+    background: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 20px rgba(238, 96, 85, 0.2);
+}
+
+.optionsIconText {
+    font-size: 2rem;
+}
+
+.optionsTitle {
+    font-family: var(--font-headings);
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.optionsSubtitle {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.btnEditar,
+.btnEliminar {
+    width: 100%;
+    padding: 1.25rem;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+    border: none;
+    font-family: inherit;
+}
+
+.btnEditar {
+    background: var(--primary-coral);
+    color: white;
+    box-shadow: 0 10px 25px -5px rgba(238, 96, 85, 0.4);
+}
+
+.btnEditar:hover {
+    transform: translateY(-3px);
+    background: var(--primary-hover);
+}
+
+.btnEliminar {
+    background: var(--bg-main);
+    color: var(--primary-coral);
+    border: 2px solid var(--primary-coral);
+}
+
+.btnEliminar:hover {
+    background: rgba(238, 96, 85, 0.05);
+}
+
+.btnCancelar {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    color: var(--text-muted);
+    background: none;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    font-family: inherit;
+}
+
+.btnCancelar:hover {
+    color: var(--primary-coral);
+    text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+    .panel {
+        padding: 1rem;
+    }
+
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+        gap: 0.75rem;
+    }
+
+    .optionsContent {
+        padding: 2rem 1.5rem;
+    }
+
+    .optionsTitle {
+        font-size: 1.5rem;
+    }
+
+    .btnEditar,
+    .btnEliminar {
+        padding: 1rem;
+        font-size: 0.95rem;
+        border-radius: 14px;
+    }
+}
+
+@media (max-width: 380px) {
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+        gap: 0.5rem;
+    }
+}
+
+.paginacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.paginaBtnFlecha {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1.5px solid var(--border-color);
+    background: var(--bg-card);
+    color: var(--text-muted);
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: var(--transition-organic);
+    line-height: 1;
+}
+
+.paginaBtnFlecha:hover:not(:disabled) {
+    border-color: var(--primary-coral);
+    color: var(--primary-coral);
+    background: var(--accent-peach-light);
+}
+
+.paginaBtnFlecha:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.paginaDots {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--border-color);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: var(--transition-organic);
+}
+
+.dot:hover {
+    background: var(--accent-peach);
+}
+
+.dotActivo {
+    width: 22px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, var(--primary-coral), var(--accent-peach));
+    cursor: default;
+}

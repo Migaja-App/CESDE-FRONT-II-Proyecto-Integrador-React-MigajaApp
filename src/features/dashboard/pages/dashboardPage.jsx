@@ -10,6 +10,11 @@ import imgUsuariosPorDocumento from "../../../assets/python/graficos/usuarios/us
 import imgAdultosMayores from "../../../assets/python/graficos/usuarios/adultos_mayores_por_rol.png";
 import imgEdadPromedio from "../../../assets/python/graficos/usuarios/edad_promedio_por_rol.png";
 import imgJovenes from "../../../assets/python/graficos/usuarios/jovenes_por_tipo_documento.png";
+import imgComerciosPorActividad from "../../../assets/python/graficos/comercios/comercios_por_actividad.png";
+import imgComerciosPorDireccion from "../../../assets/python/graficos/comercios/comercios_por_direccion.png";
+import imgComerciosPorRangoNit from "../../../assets/python/graficos/comercios/comercios_por_rango_nit.png";
+import imgPresenciaWeb from "../../../assets/python/graficos/comercios/presencia_web.png";
+import imgTopRepresentantes from "../../../assets/python/graficos/comercios/top_representantes.png";
 import styles from "./dashboardPage.module.css";
 
 const GRAFICAS_USUARIOS = [
@@ -18,6 +23,14 @@ const GRAFICAS_USUARIOS = [
     { src: imgAdultosMayores,       titulo: "Adultos mayores por rol" },
     { src: imgEdadPromedio,         titulo: "Edad promedio por rol" },
     { src: imgJovenes,              titulo: "Jóvenes por tipo de documento" },
+];
+
+const GRAFICAS_COMERCIOS = [
+    { src: imgComerciosPorActividad,  titulo: "Comercios por actividad" },
+    { src: imgComerciosPorDireccion,  titulo: "Comercios por dirección" },
+    { src: imgComerciosPorRangoNit,   titulo: "Comercios por rango de NIT" },
+    { src: imgPresenciaWeb,           titulo: "Presencia web" },
+    { src: imgTopRepresentantes,      titulo: "Top representantes" },
 ];
 
 function DashboardPage() {
@@ -74,7 +87,7 @@ function DashboardPage() {
           <ActividadReciente gastos={resumen.recientes} />
           <div className={styles.graficasGrid}>
             <GraficaPlaceholder titulo="Estadísticas de usuarios" graficas={GRAFICAS_USUARIOS} />
-            <GraficaPlaceholder titulo="Gráfica 2" />
+            <GraficaPlaceholder titulo="Estadísticas de comercios" graficas={GRAFICAS_COMERCIOS} />
           </div>
         </>
       )}
